@@ -1,0 +1,87 @@
+{
+  "name": "onlyfansfinder.ai-backend",
+  "version": "0.0.1",
+  "author": "Michael Kneeshaw",
+  "description": "",
+  "keywords": [
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kneeshaw-Developments/onlyfansfinder.ai-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kneeshaw-Developments/onlyfansfinder.ai-backend/issues"
+  },
+  "homepage": "https://github.com/Kneeshaw-Developments/onlyfansfinder.ai-backend#readme",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "nodemon ./dist/index.js",
+    "build": "tsc",
+    "seed-dev": "ts-node-dev ./src/seeders/index.ts",
+    "seed-prod": "node ./dist/seeders/index.js",
+    "prettier-fix": "prettier --write src/**/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint-fix": "eslint src/**/*.ts --fix"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "http-status": "^1.7.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^3.3.7",
+    "nodemailer": "^6.9.8",
+    "twilio": "^4.20.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-jwt": "^7.4.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.10.0",
+    "@types/nodemailer": "^6.4.14",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^8.0.3",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2"
+  }
+}
